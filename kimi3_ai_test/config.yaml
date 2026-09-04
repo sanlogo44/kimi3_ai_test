@@ -1,0 +1,22 @@
+logging:
+  level: "INFO"
+  colored: true
+  log_file: null
+
+hardware:
+  device: "auto"
+  use_4bit: true
+  use_fp16: true
+  weights_dtype: "fp32"
+
+model:
+  name: "meta-llama/Meta-Llama-3-8B-Instruct"
+  max_tool_iterations: 5
+
+training:
+  output_dir: "./tool_model"
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  num_epochs: 3
+  learning_rate: 0.0002
+  max_length: 2048
