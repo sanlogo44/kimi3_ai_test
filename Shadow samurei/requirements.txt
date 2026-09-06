@@ -1,0 +1,17 @@
+# Kernabhängigkeiten – die App läuft OHNE AI-Bibliotheken.
+# PyTorch/transformers/datasets sind optional (siehe requirements-ai.txt).
+# Ohne AI-Abhängigkeiten starten GUI, Web, CLI und Werkzeuge; der Chat ist
+# dann deaktiviert und zeigt einen Hinweis (wie beim fehlenden Rust-Kern).
+
+# Desktop-Oberfläche
+customtkinter>=5.2.0
+pillow>=10.0.0
+
+# Diagramme im Entwickler-Dashboard
+matplotlib>=3.7.0
+
+# Konfigurationsdateien einlesen
+pyyaml>=6.0
+
+# Werkzeug-Server / MCP-Hilfsfunktionen (optional, aber klein)
+requests>=2.28.0

@@ -1,0 +1,54 @@
+# Konfiguration für kimi3_ai_test
+# Fehlende Werte werden aus den Standardwerten in config_loader.py ergänzt.
+
+# Protokollierung
+logging:
+  level: "INFO"          # DEBUG, INFO, WARNING oder ERROR
+  colored: true          # farbige Ausgabe im Terminal
+  log_file: null         # Pfad einer Protokolldatei oder null
+
+hardware:
+  device: "auto"         # auto, cuda, mps, xpu, npu, tpu oder cpu
+  use_4bit: true         # 4-Bit-Quantisierung (benötigt bitsandbytes, nur CUDA)
+  use_fp16: true         # halbe Genauigkeit auf der Grafikkarte
+  weights_dtype: "fp32"  # Datentyp der Gewichte beim Laden
+  npu:
+    enabled: true        # NPU nutzen, wenn eine Vendor-Runtime vorhanden ist
+                          #   Ascend: torch_npu / CANN
+                          #   Intel NPU: nur Inferenz über OpenVINO (kein Training)
+  tpu:
+    enabled: true        # Google-TPU nutzen, wenn torch_xla installiert ist
+  parallel:
+    enabled: true        # mehrere Aufgaben gleichzeitig trainieren
+    max_workers: 0       # 0 = automatisch (Anzahl der Geräte, mind. 1)
+    strategy: "balance"  # balance (Last verteilen) oder pin (Gerät fest zuweisen)
+
+model:
+  # LLM-Quelle – Priorität (wenn source=auto):
+  #   1. lokal trainiertes Modell aus "local_path" (kein Download)
+  #   2. OpenAI-kompatibler API-Server, wenn "api_key" gesetzt ist
+  #   3. Hugging-Face-Modellname aus "name" (Achtung: meta-llama/... ist gated)
+  source: "auto"            # auto, local oder api
+  local_path: "./tool_model"  # Ordner mit config.json + *.safetensors/.bin/.gguf
+  api_key: ""               # API-Schlüssel (auch Env LLM_API_KEY). Leer = API deaktiviert
+  api_base: "http://localhost:1234/v1"  # OpenAI-kompatibler Server (auch Env LLM_API_BASE)
+  api_model: "local-model"  # Modellname für den API-Server
+  name: "meta-llama/Meta-Llama-3-8B-Instruct"  # Fallback: HF-Modellname (gated -> HF_TOKEN)
+  max_tool_iterations: 5 # höchstens so viele Werkzeugaufrufe je Antwort
+
+training:
+  output_dir: "./tool_model"
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  num_epochs: 3
+  learning_rate: 0.0002
+  max_length: 2048
+
+auth:
+  default_user: "Admin"          # Standardkonto beim ersten Start
+  default_password: "1234"
+  force_password_change: true    # Passwortwechsel bei der Erstanmeldung
+
+oberflaeche:
+  erscheinungsbild: "System"     # System, Hell oder Dunkel
+  farbschema: "kimi"

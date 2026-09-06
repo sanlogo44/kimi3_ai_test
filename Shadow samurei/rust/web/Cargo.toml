@@ -1,0 +1,27 @@
+[package]
+name = "web"
+description = "Weboberfläche des Kimi3-Projekts (axum)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "kimi3-web"
+path = "src/main.rs"
+
+[lib]
+name = "web"
+path = "src/lib.rs"
+
+[dependencies]
+kern.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+time.workspace = true
+axum = { version = "0.8", features = ["json", "form", "query"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "process", "signal", "time", "sync", "io-util", "net"] }
+tower = "0.5"
+hmac.workspace = true
+sha2.workspace = true
+subtle.workspace = true
+hex.workspace = true
