@@ -1,0 +1,27 @@
+# Kernbibliotheken für Modell und Training
+torch>=2.0.0
+transformers>=4.35.0
+accelerate>=0.20.0
+datasets>=2.14.0
+
+# Die Weboberfläche steckt im Rust-Programm „kimi3-web“ (Ordner „rust/“) und
+# braucht keine Python-Pakete. Bauen mit: bash rust/bauen.sh
+
+# Desktop-Oberfläche
+customtkinter>=5.2.0
+pillow>=10.0.0
+
+# Diagramme im Entwickler-Dashboard
+matplotlib>=3.7.0
+
+# Konfigurationsdateien einlesen
+pyyaml>=6.0
+
+# Modelle von Hugging Face herunterladen
+huggingface-hub>=0.17.0
+
+# Optional: 4-Bit-Quantisierung (nur mit NVIDIA-Grafikkarte sinnvoll)
+# bitsandbytes>=0.41.0
+
+# Optional: sparsames Weitertraining mit LoRA
+# peft>=0.7.0

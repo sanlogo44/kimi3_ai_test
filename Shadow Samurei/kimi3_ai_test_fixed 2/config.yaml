@@ -1,0 +1,35 @@
+# Konfiguration für kimi3_ai_test
+# Fehlende Werte werden aus den Standardwerten in config_loader.py ergänzt.
+
+# Protokollierung
+logging:
+  level: "INFO"          # DEBUG, INFO, WARNING oder ERROR
+  colored: true          # farbige Ausgabe im Terminal
+  log_file: null         # Pfad einer Protokolldatei oder null
+
+hardware:
+  device: "auto"         # auto, cuda oder cpu
+  use_4bit: true         # 4-Bit-Quantisierung (benötigt bitsandbytes)
+  use_fp16: true         # halbe Genauigkeit auf der Grafikkarte
+  weights_dtype: "fp32"  # Datentyp der Gewichte beim Laden
+
+model:
+  name: "meta-llama/Meta-Llama-3-8B-Instruct"
+  max_tool_iterations: 5 # höchstens so viele Werkzeugaufrufe je Antwort
+
+training:
+  output_dir: "./tool_model"
+  batch_size: 1
+  gradient_accumulation_steps: 8
+  num_epochs: 3
+  learning_rate: 0.0002
+  max_length: 2048
+
+auth:
+  default_user: "Admin"          # Standardkonto beim ersten Start
+  default_password: "1234"
+  force_password_change: true    # Passwortwechsel bei der Erstanmeldung
+
+oberflaeche:
+  erscheinungsbild: "System"     # System, Hell oder Dunkel
+  farbschema: "kimi"
