@@ -1,4 +1,4 @@
-"""Schwarm-Orchestrierung für kimi3_ai_test.
+"""Schwarm-Orchestrierung für shadow_ai_test.
 
 Ein Schwarm besteht aus mehreren Agenten mit festen Rollen, die gemeinsam eine
 Aufgabe bearbeiten:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Haupteinstiegspunkt für kimi3_ai_test.
+"""Haupteinstiegspunkt für shadow_ai_test.
 
 Beispiele:
     python main.py                  Desktop-Oberfläche
@@ -38,7 +38,7 @@ def starte_weboberflaeche(host: str, port: int) -> int:
 def main() -> int:
     """Liest die Argumente und startet den gewählten Modus."""
     zerleger = deutscher_zerleger(
-        description="kimi3_ai_test – Assistent mit Werkzeugzugriff",
+        description="shadow_ai_test – Assistent mit Werkzeugzugriff",
         formatter_class=_DeutscheHilfe,
     )
     zerleger.add_argument(

@@ -1,7 +1,7 @@
 """Re-Export-Modul für den Python-Kern.
 
 Dieses Modul stellt die Abwärtskompatibilität sicher: früher wurde hier das
-Rust-Erweiterungsmodul ``kimi3_kern`` (PyO3) importiert. Da der Kern nun in
+Rust-Erweiterungsmodul ``shadow_kern`` (PyO3) importiert. Da der Kern nun in
 Python geschrieben ist, leitet dieses Modul alle Zugriffe an das Paket ``kern``
 weiter.
 

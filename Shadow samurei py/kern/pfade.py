@@ -2,7 +2,7 @@
 
 Der Projektordner wird in dieser Reihenfolge bestimmt:
 
-1. Umgebungsvariable KIMI3_ORDNER,
+1. Umgebungsvariable SHADOW_ORDNER,
 2. der erste Ordner ab dem Arbeitsverzeichnis nach oben, der eine
    config.yaml enthält,
 3. das Arbeitsverzeichnis selbst.
@@ -11,7 +11,7 @@ Der Projektordner wird in dieser Reihenfolge bestimmt:
 import os
 
 #: Name der Umgebungsvariable, mit der sich der Projektordner setzen lässt.
-UMGEBUNGSVARIABLE = "KIMI3_ORDNER"
+UMGEBUNGSVARIABLE = "SHADOW_ORDNER"
 
 
 def projektordner():

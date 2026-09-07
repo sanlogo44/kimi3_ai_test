@@ -1,7 +1,7 @@
 """Konfigurationslader für die Anwendung.
 
 Das Lesen der YAML- oder JSON-Datei und das Ergänzen fehlender Werte
-übernimmt der Rust-Kern (``kimi3_kern.lade_konfiguration``). Dieses Modul ist
+übernimmt der Rust-Kern (``shadow_kern.lade_konfiguration``). Dieses Modul ist
 nur noch eine dünne Hülle darüber. Der Name ``DEFAULT_CONFIG`` bleibt
 erhalten, weil andere Module ihn zum Nachschlagen verwenden.
 """

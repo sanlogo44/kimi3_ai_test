@@ -1,7 +1,7 @@
 """Metrikschnittstelle der Weboberfläche.
 
 Das Modul ist eine dünne Hülle um :mod:`dev_tools.metrics_tracker` und damit
-um die Metrikhaltung des Rust-Kerns (:class:`kimi3_kern.MetrikSpeicher`), damit
+um die Metrikhaltung des Rust-Kerns (:class:`shadow_kern.MetrikSpeicher`), damit
 Weboberfläche, Desktop-GUI und Entwicklerwerkzeuge dieselben Daten nutzen.
 """
 from __future__ import annotations

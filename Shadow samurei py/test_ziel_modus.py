@@ -20,8 +20,8 @@ from typing import Any, Callable, List, Optional
 
 # Stub fuer den Rust-Kern (wie in test_schwarm.py), damit der Test ohne
 # gebautes Modul laeuft.
-if "kimi3_kern" not in sys.modules:
-    _stub = types.ModuleType("kimi3_kern")
+if "shadow_kern" not in sys.modules:
+    _stub = types.ModuleType("shadow_kern")
     _stub.richte_protokoll_ein = lambda *a, **k: None
     _stub.setze_protokollstufe = lambda *a, **k: None
     _stub.protokolliere = lambda stufe, meldung: print(f"[{stufe}] {meldung}")
@@ -30,7 +30,7 @@ if "kimi3_kern" not in sys.modules:
     _stub.lade_konfiguration = lambda path="config.yaml": {
         "logging": {"level": "INFO", "colored": False, "log_file": None},
     }
-    sys.modules["kimi3_kern"] = _stub
+    sys.modules["shadow_kern"] = _stub
 
 from mcp_protocol import MCPServer, ToolDefinition, ToolParameter
 from ziel_modus import ZielModus, python_datei_pruefung

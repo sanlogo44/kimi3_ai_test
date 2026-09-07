@@ -69,7 +69,7 @@ Shadow/
 │   ├── gespraech_speicher.py #   Gespräche speichern und laden
 │   └── diagramme.py          #   matplotlib-Diagramme
 ├── data/                     # Laufzeitdaten (wird angelegt)
-├── kimi3_kern.py             # Re-Export-Modul (leitet an kern weiter)
+├── shadow_kern.py             # Re-Export-Modul (leitet an kern weiter)
 ├── kern_modul.py             # lädt das Kern-Paket und erklärt fehlende Importe
 ├── kern_bruecke.py           # Brücke: Webserver ruft damit PyTorch-Aufgaben auf
 ├── gui.py                    # Desktop-Oberfläche

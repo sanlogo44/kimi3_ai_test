@@ -25,7 +25,7 @@ class RechenFehler(ValueError):
 def berechne(ausdruck: str) -> float | int:
     """Wertet einen mathematischen Ausdruck sicher aus.
 
-    Die Auswertung übernimmt der Rust-Kern (``kimi3_kern.berechne``): Erlaubt
+    Die Auswertung übernimmt der Rust-Kern (``shadow_kern.berechne``): Erlaubt
     sind Zahlen, Grundrechenarten sowie die dort hinterlegten Funktionen und
     Konstanten. Ganze Ergebnisse werden wie bisher als Ganzzahl geliefert.
     """

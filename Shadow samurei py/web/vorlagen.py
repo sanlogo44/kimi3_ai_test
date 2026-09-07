@@ -663,7 +663,7 @@ GRUNDSKRIPT = """
     // Erscheinungsbild (hell/dunkel) wird im Browser gespeichert.
     function setzeErscheinungsbild(modus) {
         document.documentElement.setAttribute('data-erscheinungsbild', modus);
-        localStorage.setItem('kimi3-erscheinungsbild', modus);
+        localStorage.setItem('shadow-erscheinungsbild', modus);
         const knopf = document.getElementById('erscheinungsbild-knopf');
         if (knopf) {
             knopf.textContent = modus === 'dunkel' ? 'Hell' : 'Dunkel';
@@ -675,7 +675,7 @@ GRUNDSKRIPT = """
         setzeErscheinungsbild(aktuell === 'dunkel' ? 'hell' : 'dunkel');
     }
 
-    setzeErscheinungsbild(localStorage.getItem('kimi3-erscheinungsbild') || 'dunkel');
+    setzeErscheinungsbild(localStorage.getItem('shadow-erscheinungsbild') || 'dunkel');
 
     // Hilfsfunktion für alle Seiten: JSON an eine Schnittstelle senden.
     async function sendeJson(adresse, inhalt = {}) {
@@ -713,7 +713,7 @@ def navigation(benutzer: str, adressen: Adressen) -> RohHtml:
         "nav",
         [("class", "navigation")],
         [
-            element("div", [("class", "nav-marke")], [text("Kimi3")]),
+            element("div", [("class", "nav-marke")], [text("Shadow")]),
             element("a", [("href", adressen.training)], [text("Training")]),
             element("a", [("href", adressen.verwaltung)], [text("Verwaltung")]),
             element("div", [("class", "nav-abstand")], []),
@@ -870,7 +870,7 @@ def anmeldeseite(fehler: str | None, adressen: Adressen) -> str:
             element(
                 "h1",
                 [("style", "margin-bottom:4px;color:var(--akzent);")],
-                [text("Kimi3")],
+                [text("Shadow")],
             ),
             element(
                 "p",
@@ -897,7 +897,7 @@ def anmeldeseite(fehler: str | None, adressen: Adressen) -> str:
         ],
     )
     return seite(
-        "Anmeldung – Kimi3",
+        "Anmeldung – Shadow",
         [
             element(
                 "div",
@@ -983,7 +983,7 @@ def zugangsdatenseite(
         ],
     )
     return seite(
-        "Zugangsdaten ändern – Kimi3",
+        "Zugangsdaten ändern – Shadow",
         [
             element(
                 "div",
@@ -1483,7 +1483,7 @@ def trainingsseite(
         )
         skript = skript + SKRIPT_METRIKEN
     return seite(
-        "Training – Kimi3",
+        "Training – Shadow",
         bereiche,
         skript,
         True,
@@ -1730,7 +1730,7 @@ def verwaltungsseite(
         ),
     ]
     return seite(
-        "Verwaltung – Kimi3",
+        "Verwaltung – Shadow",
         bereiche,
         SKRIPT_VERWALTUNG,
         True,

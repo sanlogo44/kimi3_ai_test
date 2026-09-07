@@ -1,7 +1,7 @@
 """Sitzungen über ein unterschriebenes Kennwort-Plätzchen (Cookie).
 
 Die Sitzung wird als JSON abgelegt, mit HMAC-SHA256 unterschrieben und im
-Plätzchen ``kimi3_sitzung`` gespeichert. Ohne gültige Unterschrift gilt die
+Plätzchen ``shadow_sitzung`` gespeichert. Ohne gültige Unterschrift gilt die
 Sitzung als leer – der Inhalt lässt sich also nicht fälschen.
 """
 from __future__ import annotations
@@ -12,8 +12,8 @@ import json
 import os
 from dataclasses import dataclass
 
-PLAETZCHEN = "kimi3_sitzung"
-STANDARD_GEHEIMNIS = "kimi3-dev-geheimnis-bitte-aendern"
+PLAETZCHEN = "shadow_sitzung"
+STANDARD_GEHEIMNIS = "shadow-dev-geheimnis-bitte-aendern"
 
 
 @dataclass

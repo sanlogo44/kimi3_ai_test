@@ -3,7 +3,7 @@
 Sammelt Rückmeldungen zu Modellantworten (hilfreich / nicht hilfreich)
 und zeigt sie in einem eigenen Fenster mit Filter und Zusammenfassung an.
 
-Gespeichert wird über den Rust-Kern (``kimi3_kern.BewertungsSpeicher``,
+Gespeichert wird über den Rust-Kern (``shadow_kern.BewertungsSpeicher``,
 Datei ``data/bewertungen.json``). Alte Dateien (``data/feedback.json``) und
 alte englische Feldnamen liest der Kern weiterhin.
 """

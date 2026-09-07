@@ -263,7 +263,7 @@ class ChatOberflaeche(ctk.CTkFrame):
         kopf = ctk.CTkFrame(self.seitenleiste, fg_color="transparent")
         kopf.grid(row=0, column=0, sticky="ew", padx=14, pady=(16, 8))
         ctk.CTkLabel(
-            kopf, text="✳  Kimi3", font=(SCHRIFT_TEXT, 17, "bold"),
+            kopf, text="✳  Shadow", font=(SCHRIFT_TEXT, 17, "bold"),
             text_color=FARBEN["text"],
         ).pack(side="left")
 
@@ -808,7 +808,7 @@ def starte_demo() -> None:
     """Startet die Chat-Oberfläche im Demo-Modus (ohne Sprachmodell)."""
     theme = hole_theme()
     fenster = ctk.CTk()
-    fenster.title("Kimi3 – Chat (Demo)")
+    fenster.title("Shadow – Chat (Demo)")
     fenster.geometry("1180x820")
     fenster.minsize(900, 620)
     fenster.configure(fg_color=FARBEN["fenster"])

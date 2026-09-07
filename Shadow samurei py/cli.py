@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Kommandozeilen-Oberfläche für kimi3_ai_test.
+"""Kommandozeilen-Oberfläche für shadow_ai_test.
 
 Startet einen einfachen Dialog im Terminal. Die Antworten werden im Datenstrom
 ausgegeben, sobald das Modell Teilstücke liefert.
@@ -62,7 +62,7 @@ def run_cli() -> int:
 
     verlauf: list[dict[str, str]] = []
 
-    print("\nKimi3 – Assistent mit Werkzeugzugriff")
+    print("\nShadow – Assistent mit Werkzeugzugriff")
     if llm is not None:
         print(f"Modell: {getattr(llm, 'model_name', 'unbekannt')}")
     else:
@@ -205,7 +205,7 @@ def run_ziel() -> int:
     warteschlange = AuftragsWarteschlange()
     warteschlange.starten()
 
-    print("\nKimi3 – Ziel-Modus (autonom bis zum Ziel)")
+    print("\nShadow – Ziel-Modus (autonom bis zum Ziel)")
     print(f"Modell: {getattr(llm, 'model_name', 'unbekannt')}")
     print("Leere Eingabe oder Strg+C zum Beenden.\n")
 

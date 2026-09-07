@@ -2,7 +2,7 @@
 
 Gespeichert wird weiterhin als JSON-Liste in ``data/metriken.json``; die
 Datenhaltung, die Auswertung und die Übernahme älterer Dateien übernimmt der
-Rust-Kern (:class:`kimi3_kern.MetrikSpeicher`). Dieses Modul ist nur die dünne
+Rust-Kern (:class:`shadow_kern.MetrikSpeicher`). Dieses Modul ist nur die dünne
 Hülle darüber und stellt die Einträge wie bisher über die Datenklasse
 :class:`MetricEntry` bereit.
 """

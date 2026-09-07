@@ -62,7 +62,7 @@ class ChatFenster:
         self.dashboard: Optional[DevDashboard] = None
 
         self.fenster = ctk.CTk()
-        self.fenster.title("Kimi3 – Werkzeugfähiger Assistent")
+        self.fenster.title("Shadow – Werkzeugfähiger Assistent")
         self.fenster.configure(fg_color=FARBEN["fenster"])
         breite, hoehe = self.einstellungen.fenstergroesse(1220, 860)
         self.fenster.geometry(f"{breite}x{hoehe}")
@@ -89,7 +89,7 @@ class ChatFenster:
         titel = ctk.CTkFrame(leiste, fg_color="transparent")
         titel.grid(row=0, column=0, padx=(18, 10), pady=10, sticky="w")
         ctk.CTkLabel(
-            titel, text="Kimi3", font=(SCHRIFT_TEXT, 18, "bold"),
+            titel, text="Shadow", font=(SCHRIFT_TEXT, 18, "bold"),
             text_color=FARBEN["akzent"],
         ).pack(side="left")
         self.benutzer_label = ctk.CTkLabel(

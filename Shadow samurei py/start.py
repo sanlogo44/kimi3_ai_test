@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Ein-Klick-Starter für kimi3_ai_test.
+"""Ein-Klick-Starter für shadow_ai_test.
 
 Diese Datei übernimmt das vollständige Einrichten und Starten des Projekts:
 
@@ -17,7 +17,7 @@ Aufruf:
     python start.py                 # Desktop-Oberfläche
     python start.py --modus web     # Weboberfläche auf Port 5000
     python start.py --modus cli     # Dialog im Terminal
-    python start.py --modus kimi3   # lokale Kimi-K3-Inferenz (transformers)
+    python start.py --modus shadow   # lokale Kimi-K3-Inferenz (transformers)
     python start.py --kein-venv     # im aktuellen Python starten (ohne venv)
     python start.py --mit-torch     # AI-Abhängigkeiten + PyTorch installieren
 
@@ -220,7 +220,7 @@ def starte_projekt(python: Path, modus: str, port: int, host: str,
             befehl += ["--geraet", geraet]
         if epochs != 5:
             befehl += ["--epochs", str(epochs)]
-    elif modus in ("kimi3", "shadow"):
+    elif modus == "shadow":
         # Lokale Inferenz läuft über das integrierte kimi_k3-Modul.
         _info("Starte lokale Inferenz (transformers).")
         _info("Strg+C beendet die Anwendung geordnet.\n")
@@ -260,7 +260,7 @@ def _hilfe() -> None:
     print("    python start.py [Optionen]")
     print()
     print("Optionen:")
-    print("    --modus <gui|web|cli|ziel|train|shadow|kimi3>  Startmodus (Standard: gui)")
+    print("    --modus <gui|web|cli|ziel|train|shadow>  Startmodus (Standard: gui)")
     print("    --port <Zahl>          Port für den Modus 'web' (Standard: 5000)")
     print("    --host <Adresse>       Adresse für den Modus 'web' (Standard: 0.0.0.0)")
     print("    --parallel <Zahl>     Gleichzeitige Trainingsaufträge im Modus 'train' (0 = auto)")
@@ -328,10 +328,10 @@ def parse_argumente() -> dict:
         _hilfe()
         sys.exit(0)
 
-    if werte["modus"] not in ("gui", "web", "cli", "ziel", "train", "shadow", "kimi3"):
+    if werte["modus"] not in ("gui", "web", "cli", "ziel", "train", "shadow"):
         _fehler(
             f"Unbekannter Modus: {werte['modus']} "
-            f"(erlaubt: gui, web, cli, ziel, train, shadow, kimi3)"
+            f"(erlaubt: gui, web, cli, ziel, train, shadow)"
         )
         sys.exit(1)
 

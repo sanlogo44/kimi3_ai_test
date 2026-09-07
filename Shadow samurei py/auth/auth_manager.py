@@ -2,7 +2,7 @@
 
 Das Modul stellt zwei Ebenen bereit:
 
-* :class:`AuthManager` – schmale Hülle um ``kimi3_kern.Kontenverwaltung``
+* :class:`AuthManager` – schmale Hülle um ``shadow_kern.Kontenverwaltung``
   (Anmeldung, Konten, Passwörter), ohne jede Abhängigkeit zur Oberfläche.
 * :class:`AuthManagerUI`, :class:`AnmeldeFenster`,
   :class:`PasswortAendernFenster` – CustomTkinter-Fenster, die die Logik
@@ -285,7 +285,7 @@ class AnmeldeFenster(_ThemenFenster):
         huelle.pack(fill="both", expand=True, padx=34, pady=30)
 
         ctk.CTkLabel(
-            huelle, text="Kimi3", font=(self.SCHRIFT, 26, "bold"),
+            huelle, text="Shadow", font=(self.SCHRIFT, 26, "bold"),
             text_color=self._farbe("akzent", "#c96442"),
         ).pack(anchor="w")
         ctk.CTkLabel(

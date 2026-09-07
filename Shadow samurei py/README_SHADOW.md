@@ -67,7 +67,7 @@ selbständig den passenden Wert. Wer auf einen Wechsel reagieren muss
 
 `kern/` enthält die Logik und Datenhaltung genau einmal: Konfiguration,
 Protokoll, Einstellungen, Schalter, Metriken, Bewertungen, Passwort-Hash und
-Konten, Checkpoint-Ordner, Rechner. Das Modul `kimi3_kern.py` leitet alle
+Konten, Checkpoint-Ordner, Rechner. Das Modul `shadow_kern.py` leitet alle
 Aufrufe an das Paket `kern` weiter.
 
 Auf Python-Seite gilt: `kern_modul.kern` ist der einzige Einstieg, und
@@ -84,7 +84,7 @@ Hülle.
 
 - `app.py` – alle Seiten und Schnittstellen, gleiche Adressen, Statuscodes
   und JSON-Felder wie vorher (englische Zweitschlüssel bleiben erhalten)
-- `sitzung.py` – Sitzung als signiertes Cookie `kimi3_sitzung` (`SECRET_KEY`)
+- `sitzung.py` – Sitzung als signiertes Cookie `shadow_sitzung` (`SECRET_KEY`)
 - `zustand.py` – gemeinsamer Zustand samt Schalter, Metriken, Bewertungen
 - `vorlagen.py` – Seiten als Python-Funktionen (`anmeldeseite`,
   `zugangsdatenseite`, `trainingsseite`, `verwaltungsseite`); keine

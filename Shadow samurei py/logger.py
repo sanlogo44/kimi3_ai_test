@@ -1,7 +1,7 @@
 """Protokoll-Modul für die Anwendung.
 
-Die Ausgabe erledigt der Rust-Kern (``kimi3_kern.richte_protokoll_ein`` und
-``kimi3_kern.protokolliere``): farbige Konsolenausgabe im Format
+Die Ausgabe erledigt der Rust-Kern (``shadow_kern.richte_protokoll_ein`` und
+``shadow_kern.protokolliere``): farbige Konsolenausgabe im Format
 ``[HH:MM:SS] STUFE Meldung`` und optional eine Protokolldatei im Format
 ``[JJJJ-MM-TT HH:MM:SS] [STUFE] Meldung``. Dieses Modul ist nur die dünne
 Hülle darüber und behält die bisherige Schnittstelle (:class:`Logger`,

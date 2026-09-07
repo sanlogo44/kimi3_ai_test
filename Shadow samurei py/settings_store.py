@@ -1,7 +1,7 @@
 """Persistente Anwendungseinstellungen (Erscheinungsbild, Fenstergröße, Farbschema).
 
 Gespeichert wird weiterhin als JSON unter ``data/settings.json``; die
-Datenhaltung übernimmt der Rust-Kern (:class:`kimi3_kern.Einstellungen`).
+Datenhaltung übernimmt der Rust-Kern (:class:`shadow_kern.Einstellungen`).
 Dieses Modul ist nur die dünne, thread-sichere Hülle darüber und liefert für
 fehlende Schlüssel wie bisher sinnvolle Standardwerte.
 """

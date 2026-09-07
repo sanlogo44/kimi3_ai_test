@@ -1,4 +1,4 @@
-"""Flask-Weboberfläche des Kimi3-Projekts.
+"""Flask-Weboberfläche des Shadow-Projekts.
 
 Alle Routen, Formularfelder, JSON-Felder, Statuscodes und Meldungen sind
 unverändert aus der Rust-Fassung übernommen, damit die Seiten und ihr
@@ -803,8 +803,8 @@ def starte_server(host: str = "0.0.0.0", port: int = 5000) -> None:
 def _lese_aufruf(argumente: list[str]) -> tuple[str, int] | None:
     """Liest die Aufrufparameter aus der Kommandozeile."""
     parser = argparse.ArgumentParser(
-        prog="kimi3-web",
-        description="Weboberfläche von Kimi3",
+        prog="shadow-web",
+        description="Weboberfläche von Shadow",
     )
     parser.add_argument(
         "--host",
@@ -829,12 +829,12 @@ def _lese_aufruf(argumente: list[str]) -> tuple[str, int] | None:
 
 def _host_aus_umgebung() -> str:
     import os
-    return os.environ.get("KIMI3_HOST", "0.0.0.0")
+    return os.environ.get("SHADOW_HOST", "0.0.0.0")
 
 
 def _port_aus_umgebung() -> str:
     import os
-    return os.environ.get("KIMI3_PORT", "5000")
+    return os.environ.get("SHADOW_PORT", "5000")
 
 
 if __name__ == "__main__":
