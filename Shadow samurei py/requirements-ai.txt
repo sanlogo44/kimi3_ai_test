@@ -1,0 +1,25 @@
+# Optionale AI-Abhängigkeiten. Nur erforderlich, wenn die Chat-Funktion und
+# lokale Modellinferenz genutzt werden sollen. Installation mit:
+#     pip install -r requirements-ai.txt
+# oder bequem über den Starter:
+#     python start.py --mit-torch
+
+# PyTorch wird von start.py (--mit-torch) backend-spezifisch installiert
+# (CPU/MPS/CUDA/ROCm) und ist hier nur als Fallback für manuelle Installation
+# aufgeführt. Wenn start.py verwendet wird, torch hier nicht extra installieren.
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Modellbibliotheken
+transformers>=4.35.0
+accelerate>=0.20.0
+datasets>=2.14.0
+
+# Modelle von Hugging Face herunterladen
+huggingface-hub>=0.17.0
+
+# Optional: 4-Bit-Quantisierung (nur mit NVIDIA-Grafikkarte sinnvoll)
+# bitsandbytes>=0.41.0
+
+# Optional: sparsames Weitertraining mit LoRA
+# peft>=0.7.0
